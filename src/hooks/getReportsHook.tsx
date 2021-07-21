@@ -15,7 +15,6 @@ const useReportIssueService = () => {
   useEffect(() => {
     loadReportData()
       .then(spamReport => {
-        console.log('LOADDED');
         setResult({
           status: 'loaded',
           payload: spamReport,
@@ -34,7 +33,6 @@ const useReportIssueService = () => {
         element.resolved = false;
       });
 
-      console.log('LOADDED2');
       resolve(reportData);
     });
 
