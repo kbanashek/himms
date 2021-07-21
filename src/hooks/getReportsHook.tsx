@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import {Service} from '../types/Service';
 import {SpamReport} from '../types/SpamReport';
-import reportedIssuesData from '../../public/reports.json';
+import reportedIssuesData from '../../data/reports.json';
 
 export interface SpamReports {
   results: SpamReport[];
