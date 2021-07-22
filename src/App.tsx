@@ -16,7 +16,6 @@ const App = () => {
   const [reportedIssues, setReportedIssues] = useState<SpamReport[]>([]);
 
   const service: Service<SpamReport[]> = useReportIssueService();
-
   useEffect(() => {
     service.status === 'loaded' ? setReportedIssues(service.payload) : [];
   }, [service]);
@@ -70,7 +69,9 @@ export const styles = StyleSheet.create({
   reportItemContainer: {
     marginTop: 15,
     backgroundColor: '#fff',
-    justifyContent: 'space-between',
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
     height: 80,
     width: '100%',
   },
@@ -82,20 +83,26 @@ export const styles = StyleSheet.create({
   buttonResolve: {
     alignItems: 'center',
     backgroundColor: 'green',
-    padding: 10,
     borderRadius: 10,
+    padding: 18,
+    width: '46%',
+    height: 60,
   },
   buttonBlocked: {
     alignItems: 'center',
     backgroundColor: 'blue',
-    padding: 10,
     borderRadius: 10,
+    padding: 18,
+    width: '46%',
+    height: 60,
   },
   buttonBlock: {
     alignItems: 'center',
     backgroundColor: 'red',
-    padding: 10,
     borderRadius: 10,
+    padding: 18,
+    width: '46%',
+    height: 60,
   },
   issueTextBold: {
     fontWeight: '800',
